@@ -1,0 +1,20 @@
+/*
+
+To run this script:
+1. Open GraphPad Prism (v8+)
+2. File > Run Script > New Script...
+3. Press OK
+4. Copy/Paste this text file into the 'Script Syntax' dialog box
+
+Ensure that you have stated the directory of where the GraphPad Prism files are located in the quotation marks following `SetPath`
+
+*/
+
+SetPath ""
+ForEach *.csv
+GoTo 1
+DuplicateDataTable
+ClearTable
+Import
+SetSheetTitle %F
+Next
